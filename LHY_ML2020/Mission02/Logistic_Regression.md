@@ -61,3 +61,14 @@
 
 
 
+设X为nxm的矩阵，Y为nxk的矩阵，w为mxk的矩阵，其中k为分类数，n为数据量，m为特征数
+
+则有：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;L}{\partial&space;W}=X^T(\mathrm{softmax}(XW)-Y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;L}{\partial&space;W}=X^T(\mathrm{softmax}(XW)-Y)" title="\frac{\partial L}{\partial W}=X^T(\mathrm{softmax}(XW)-Y)" /></a>
+
+其中softmax函数按行进行softmax，可以写为：
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mathrm{softmax}(A)=\frac{e^A}{e^A\vec{1}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathrm{softmax}(A)=\frac{e^A}{e^A\vec{1}}" title="\mathrm{softmax}(A)=\frac{e^A}{e^A\vec{1}}" /></a>
+
+其中除法为按行相除，最终得到的矩阵大小与A一致。
