@@ -8,7 +8,7 @@ Backpropagation（反向传播）是一种用于计算神经网络的梯度下�
 
 先根据链式法则将微分拆解为两部分：
 
-<img src="img/3.png" />
+<img src="img/07_01.png" />
 
 + <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;z}{\partial&space;w}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;z}{\partial&space;w}" title="\frac{\partial z}{\partial w}" /></a>部分：这部分在激活函数之前，直接求导便可以知道其结果为w的**前驱**
   + 例如上图中w1的前驱就是x1，第i层中的w的前驱就是w对应的边的起点的值
@@ -19,7 +19,7 @@ Backpropagation（反向传播）是一种用于计算神经网络的梯度下�
 
 对<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;z}" title="\frac{\partial C}{\partial z}" /></a>进一步拆解，如下图所示：
 
-<img src="img/4.png" />
+<img src="img/07_02.png" />
 
 + <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;a}{\partial&space;z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;a}{\partial&space;z}" title="\frac{\partial a}{\partial z}" /></a>部分：由于<a href="https://www.codecogs.com/eqnedit.php?latex=a=\sigma&space;(z)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a=\sigma&space;(z)" title="a=\sigma (z)" /></a>，故这部分等于<a href="https://www.codecogs.com/eqnedit.php?latex={\sigma}'(z)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\sigma}'(z)" title="{\sigma}'(z)" /></a>
   + 不同的激活函数求导都不同，这里不做展开。但在z已知的情况下，这部分可以理解为一个常数项
@@ -29,7 +29,7 @@ Backpropagation（反向传播）是一种用于计算神经网络的梯度下�
 
 于是最终<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;z}" title="\frac{\partial C}{\partial z}" /></a>便可以写作（以上图为例）：
 
-<img src="img/5.png" />
+<img src="img/07_03.png" />
 
 可以发现只需要反着算就可以算出全部的<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;z}" title="\frac{\partial C}{\partial z}" /></a>。
 
@@ -37,7 +37,7 @@ Backpropagation（反向传播）是一种用于计算神经网络的梯度下�
 
 计算最后一层的<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;C}{\partial&space;z}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;C}{\partial&space;z}" title="\frac{\partial C}{\partial z}" /></a>的时候，会有些不一样：
 
-<img src="img/6.png" />
+<img src="img/07_04.png" />
 
 同样是拆解成两个量：
 

@@ -9,5 +9,5 @@
 
 ## 课程笔记
 
-+ [李宏毅机器学习课2020](https://github.com/Caproner/Note/tree/master/LHY_ML2020/)：台湾大学的机器学习课程，~~适合用于入门~~。
++ [李宏毅机器学习课](https://github.com/Caproner/Note/tree/master/NTU_MachineLearning/)：台湾大学的机器学习课程，适合用于入门。
 

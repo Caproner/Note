@@ -4,7 +4,7 @@
 
 主要思路如下图所示：
 
-<img src="img/7.png" />
+<img src="img/09_01.png" />
 
 ## New activation function
 
@@ -16,7 +16,7 @@
 
 ReLU的思想是线性并且只砍掉负值。于是其函数就是简单的分段函数：
 
-<img src="img/8.png" />
+<img src="img/09_02.png" />
 
 ReLU相对sigmoid函数的好处有：
 
@@ -27,7 +27,7 @@ ReLU相对sigmoid函数的好处有：
 
 沿着这个思路，ReLU也有一些变种：
 
-<img src="img/9.png" />
+<img src="img/09_03.png" />
 
 ### Maxout
 
@@ -35,11 +35,11 @@ Maxout的核心思想是，对线性函数计算结果分组，然后每组取�
 
 ReLU本质上就是Maxout的特例。
 
-<img src="img/10.png" />
+<img src="img/09_04.png" />
 
 由于Max函数无法求导，所以在训练的时候，可以将当前轮次的非Max神经元视为不存在：
 
-<img src="img/11.png" />
+<img src="img/09_05.png" />
 
 ## Adapted Learning Rate
 
@@ -47,7 +47,7 @@ ReLU本质上就是Maxout的特例。
 
 ### RMSProp
 
-<img src="img/12.png" />
+<img src="img/09_06.png" />
 
 其可调参数<a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>的取值范围在0到1之间，数值越大表示越信任之前的梯度。
 
@@ -55,7 +55,7 @@ ReLU本质上就是Maxout的特例。
 
 为了减少梯度下降陷入局部最小值的几率，引入现实物理中的惯性概念。在计算下一步要走的向量之后，让这个向量加上**上一次走的向量**（的倍数，乘上的倍数越大惯性越大）。这样即使梯度下降陷入局部最小值也有可能会因为惯性冲出局部最小。
 
-<img src="img/13.png" />
+<img src="img/09_07.png" />
 
 但缺点也显而易见：这会带来更多的迭代次数。
 
@@ -63,7 +63,7 @@ ReLU本质上就是Maxout的特例。
 
 Adam本质上就是RMSProp+Momentum：
 
-<img src="img/14.png" />
+<img src="img/09_08.png" />
 
 其中m就是梯度+惯性之后的最终方向，v就是RMSProp里面要除的那堆东西（的平方）。
 
@@ -87,13 +87,13 @@ Adam本质上就是RMSProp+Momentum：
 
 L2的参数修正使用二范数，补充该正则化项之和的Loss和Gradient如下：
 
-<img src="img/15.png" />
+<img src="img/09_09.png" />
 
 ### L1 Regularization
 
 相对于L2而言，L1采用一范数，补充后的Loss和Gradient如下：
 
-<img src="img/16.png" />
+<img src="img/09_10.png" />
 
 其中当w大于0时sgn(w)为1，小于0时sgn(w)为-1。
 

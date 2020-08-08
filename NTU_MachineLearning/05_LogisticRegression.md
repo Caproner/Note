@@ -6,37 +6,37 @@
 
 逻辑回归的本质是拟合下面这个函数：
 
-<img src="img/14.png" />
+<img src="img/05_01.png" />
 
 其中：
 
-<img src="img/15.png" />
+<img src="img/05_02.png" />
 
 对于二分类问题而言，训练数据的答案<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}" title="\hat{y}" /></a>只有0和1两种。
 
 对于分类问题，我们可以使用预测答案的分布和正确答案的分布的Cross Entropy（交叉熵）来作为其损失函数：
 
-<img src="img/16.png" />
+<img src="img/05_03.png" />
 
 其中Cross Entropy的定义如下：
 
-<img src="img/17.png" />
+<img src="img/05_04.png" />
 
 对这个损失函数使用梯度下降的时候，其梯度可以用损失函数对特征的微分表示：
 
-<img src="img/18.png" /><img src="img/19.png" />
+<img src="img/05_05.png" /><img src="img/05_06.png" />
 
 > 之所以损失函数带了负号和自然对数，是因为课件里面的原函数是简单的相减，将其求自然对数的负数才得到交叉熵
 
 于是就会发现，逻辑回归的式子和线性回归的迭代式子一模一样：
 
-<img src="img/20.png" />
+<img src="img/05_07.png" />
 
 ## Why not Square Error
 
 对于逻辑回归而言，均方误差的Loss Function过于平缓，使得在上面做梯度下降会很慢甚至走不动：
 
-<img src="img/21.png" />
+<img src="img/05_08.png" />
 
 ## Discriminative vs Generative
 
@@ -53,13 +53,11 @@
 
 对于多分类问题，一般是使用多个线性函数进行softmax得到的函数：
 
-<img src="img/22.png" />
+<img src="img/05_09.png" />
 
 那么其Loss就是结果向量与答案向量的Cross Entropy：
 
-<img src="img/23.png" />
-
-
+<img src="img/05_10.png" />
 
 设X为nxm的矩阵，Y为nxk的矩阵，w为mxk的矩阵，其中k为分类数，n为数据量，m为特征数
 
