@@ -19,11 +19,11 @@ Recurrent Neural Network，简称RNN。核心思想是：
 
 这个单元用来存储上一次从这个神经元中输出的值，用于加和到下一个输入值中：
 
-<img src="img/1.png" />
+<img src="img/21_01.png" />
 
 下面是一个最简单的例子，下图是一个已经训练好的RNN，图中所有的神经元都是y=x的线性函数，所有的边权值都是1。
 
-<img src="img/2.png" />
+<img src="img/21_02.png" />
 
 显然的，同等规模的网络，RNN的参数数量会是DNN的两倍。
 
@@ -33,7 +33,7 @@ Recurrent Neural Network，简称RNN。核心思想是：
 
 区别在于Jordan使用RNN最终输出存到记忆单元中，而Elman使用单个神经元的输出：
 
-<img src="img/3.png" />
+<img src="img/21_03.png" />
 
 > 据说Jordan会比Elman的效果要好，因为最终输出是有意义的，而中间输出是无意义的
 >
@@ -43,7 +43,7 @@ Recurrent Neural Network，简称RNN。核心思想是：
 
 双向RNN的核心思想是**不漏掉下文数据**，简单地讲就是拿两个RNN，一个将数据从头读到尾，另一个将数据从尾读到头，然后将两个RNN的结果作为输入得到最终结果：
 
-<img src="img/4.png" />
+<img src="img/21_04.png" />
 
 ## LSTM
 
@@ -51,7 +51,7 @@ Long Short-term Memory（LSTM）是一种带记忆的神经元的设计方式。
 
 LSTM的神经元设计引入了Input Gate（控制外部输入）、Output Gate（控制最终结果输出）、Forget Gate（控制记忆单元遗忘）来让神经元尝试去学习更长期的记忆方式。
 
-<img src="img/5.png" />
+<img src="img/21_05.png" />
 
 可以看到，三个Gate本质上也是需要学习的。
 
@@ -63,17 +63,18 @@ LSTM的神经元设计引入了Input Gate（控制外部输入）、Output Gate�
 
 其计算过程如下：
 
-<img src="img/6.png" />
+<img src="img/21_06.png" />
 
 ### 完全体LSTM
 
 上面这个是简化后的LSTM，完全体的LSTM还会将神经元的输出（h）和当前记忆单元的数值（c）参与进下一次的输入中：
 
-<img src="img/7.png" />
+<img src="img/21_07.png" />
 
 > 图中没上标的z上面漏了一个激活函数，一个LSTM应该是5个激活函数
 
 > 虽然第一眼过去就是“这他娘什么玩意”，但这已经是如今RNN的标准实现了
 >
 > 甚至为了区分，原先的RNN被称为SimpleRNN，而现在说RNN的话，一般就指代LSTM了
+
 
