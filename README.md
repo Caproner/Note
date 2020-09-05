@@ -11,4 +11,5 @@
 
 + [李宏毅机器学习课](https://github.com/Caproner/Note/tree/master/NTU_MachineLearning/)：台湾大学的机器学习课程，适合用于入门。
 
-+ [线性代数](https://github.com/Caproner/Note/tree/master/LinearAlgebra/)：线性代数网课笔记。
++ [线性代数](https://github.com/Caproner/Note/tree/master/XueTang/LinearAlgebra/)：线性代数网课笔记。
+
