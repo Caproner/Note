@@ -16,3 +16,5 @@
 + [机器学习](https://github.com/Caproner/Note/tree/master/XueTang/MachineLearning/)：机器学习学堂在线网课笔记。
 
 + [深度学习](https://github.com/Caproner/Note/tree/master/XueTang/DeepLearning/)：深度学习学堂在线网课笔记。
+
++ [概率论](https://github.com/Caproner/Note/tree/master/XueTang/ProbabilityTheory/)：概率论学堂在线网课笔记。
