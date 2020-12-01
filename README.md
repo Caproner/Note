@@ -10,11 +10,3 @@
 ## 课程笔记
 
 + [李宏毅机器学习课](https://github.com/Caproner/Note/tree/master/NTU_MachineLearning/)：台湾大学的机器学习课程，适合用于入门。
-
-+ [线性代数](https://github.com/Caproner/Note/tree/master/XueTang/LinearAlgebra/)：线性代数学堂在线网课笔记。
-
-+ [机器学习](https://github.com/Caproner/Note/tree/master/XueTang/MachineLearning/)：机器学习学堂在线网课笔记。
-
-+ [深度学习](https://github.com/Caproner/Note/tree/master/XueTang/DeepLearning/)：深度学习学堂在线网课笔记。
-
-+ [概率论](https://github.com/Caproner/Note/tree/master/XueTang/ProbabilityTheory/)：概率论学堂在线网课笔记。
